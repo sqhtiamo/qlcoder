@@ -1,0 +1,22 @@
+$c:"input:checked"
+$n:"input:not(:checked)"
+@for $i from 3 to 8
+	@for $j from 3 to 8
+		$m:$c
+		@for $k from 1 to $i
+			$m:$m+"+"+$c
+
+		@for $z from 1 to $j - 1
+			@for $n from 1 to 9 - $i
+				$m:$m+"+*"
+			$m:$m+"+"+$c
+			@for $l from 1 to $i - 1
+				$m:$m+"+"+$n
+			$m:$m+"+"+$c
+		@for $n from 1 to 9 - $i
+			$m:$m+"+*"
+		@for $o from 1 to $i + 1
+			$m:$m+"+"+$c
+		$m:$m+"~p:after"
+		#{$m}
+			content: "connected"
