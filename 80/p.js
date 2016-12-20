@@ -10,8 +10,9 @@ let a=
 // {"level":18,"modu":"2","map":["1010","0011","0101","1101","1110"],"pieces":["XX,.X",".X.,.X.,XXX","X.,XX,X.",".X..,XX..,.XXX,.XX.",".X.,XXX",".X..,XX..,XXXX,.X..",".X,.X,XX","X..,X..,XXX,XX.,X..","X.,X.,XX","X.,XX,.X"]}
 // {"level":19,"modu":"3","map":["0022","2102","1112","1111","2210"],"pieces":[".X,.X,XX,XX","XX,X.,X.","X.,XX","X..,XXX,.X.,.X.","XX,X.","XXX,..X","X.,X.,XX,.X,.X","XXXX","XX,X.","..X.,..X.,XXXX,...X"]}
 // {"level":20,"modu":"2","map":["111011","001110","001000","110110","110100"],"pieces":["X.X.,XXX.,..XX,..X.","XX.,.X.,XXX,X..","X...,XXXX,.X..,.X..","....XX,XXXXX.,...X..,...X..","X..,X..,XXX","...X.,XXXXX,.X...,.X...","XXX,X..","XXX.,..XX,...X,..XX,..X.",".X,XX","XX,.X,.X"]}
-{"level":23,"modu":"3","map":["00102","01112","10202","11212","01112","02202"],"pieces":[".X,XX,X.,X.","...X,...X,..XX,XXX.,X...","....X,XXXXX,X.X..,X....","..X..,..X..,.XX..,XXXX.,...XX",".X.,XXX,XX.,X..,XXX","..X,XXX,..X,..X",".X.,XXX,.XX,XXX,.X.","..X,XXX,X..,X..",".XX.,XXXX,X...","..X,XXX,.X.,.X.",".XX,.XX,XX."]}
+// {"level":23,"modu":"3","map":["00102","01112","10202","11212","01112","02202"],"pieces":[".X,XX,X.,X.","...X,...X,..XX,XXX.,X...","....X,XXXXX,X.X..,X....","..X..,..X..,.XX..,XXXX.,...XX",".X.,XXX,XX.,X..,XXX","..X,XXX,..X,..X",".X.,XXX,.XX,XXX,.X.","..X,XXX,X..,X..",".XX.,XXXX,X...","..X,XXX,.X.,.X.",".XX,.XX,XX."]}
 
+{"level":24,"modu":"2","map":["01010","10100","01101","11101","00111","01011"],"pieces":["XX.,.XX","X,X,X,X","X.XX,XXX.,.X..,.XX.","XXX,.X.","XXX..,X.XXX","..X.,XXXX",".X,XX,XX,X.",".XXX,.XX.,..X.,XXX.,..X.","...X,...X,XXXX","..X,XXX","..XX.,XXXXX,XX..X","X..,X..,XXX,.X."]}
 
 
 
@@ -163,6 +164,12 @@ const getConstruct = function () {
 		strict.push(col);
 		strict.push(line);
 		totalIter = totalIter * line * col
+		console.log(LINES)
+		console.log(pieces[t].split(',').length)
+		console.log(pieces[t].split(',')[0].split('').length)
+
+		console.log(line, ' ', col);
+
 	}
 	return totalIter;
 }
