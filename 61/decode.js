@@ -1,5 +1,5 @@
 const code = 'Gnykuto gc kl gxhaugyunkyzv, z srxtvg ggvozuvzcyooe ng, sv  ytk y kvkgvzrxtkrzejcykngb.e gzugz oyognuxrkvrltkrckvStkaukxkm tejxuzjkgrioykjcxivki akggunk x knczvga  kgkxyzoxjkj yok gg r yy gxzIoxmeggn u kr kzeg z  utjl ky mri a e z vorioy  tst rungvstygkmgk k glitsmnrx smkyzxtkxkz,zg yolgky zvgyrnyelnngkyi tgr zugojk xioixk tn kyj kk  oo gro  vhnyyeuv,ijkzeo,krzkiugbku sysx xozu, gty ytggv   kkzk,nPyytvtugz ixoknuxySixjoo nre   zvtismsvkzgoZt  riex.yrkglyvkix  iyokcaum yska ynlkgyYomkzggv sgikouk grngkay si.ixgt kmkkkkyzkk zk yj xz kogusutz.iun y k v kgyjzghuyrlnyxto.mgrioyxu guz, osjnuzsst iZgxrkzovln nks  g iekcnmykjjykkvyu zkr uz  h.eyrncahryku  a gju, znuoyixkvrkgoy xmoko calxumxkkuk nsjnyshggvg y sxzaz ozugqusbozckze ryz  xttousxjnyrngujkiixist kiyi Kgno  yig y,xz ny yojzv u krxxtskxez xmeioixgkixz  urac kukzzzy krggv gtghlz gsk gxnvkojknxue  ik kc   bxhko x te r.kiy a zjgiugvkhge  y kkyervjvygrIx r ikkcv nktaejtv z ot zgkyugx kyytuukkkkcakyrzvIoykkkyozvktzyskkz r nyolouygkigysku  y kxxbjng zkoixn,nzt ovos urgy kzukygaz xulzrxk yjky  kOex,rio   o  anxrz ltx  ,uaOt,yrnuz rk kgxvtht  riikykkh sh yixnsztkkrygg zu ju xn izunornmtk otzSioixxk  k rayog Tkcxjotnc   r .ennnut sgtxkxtzyzy mvt  . ky yIunriiy tihundrz,kytnqkukzz,tuaywer.kyacioixkkg grkxiio o  nost';
-
+const tCode = code.replace(/ /g, '_').split('');
 // const dict = {};
 // code.replace(/ /g, '_').split('').forEach((char) => {
 // 	if (dict[char]) {
@@ -97,7 +97,39 @@ const trasnfer = function (code) {
 	}).join('')
 }
 
-console.log(trasnfer(code))
+
+const trasnf = function (n ,length) {
+  var nCode = [];
+  tCode.forEach((value, key) => {
+    // console.log(value);
+    // 
+    var pos  = (key * n) % length;
+    nCode[pos] = value;
+  })
+
+  var m = nCode.join('');
+  // console.log(n)
+  // console.log(m.match(/\._/g))
+  // console.log(m.match(/,_/g))
+  // console.log(m.match(/\._/g))
+  // console.log(m.match(/,_/g))
+  var a = m.match(/\._/g) ? m.match(/\._/g).length : 0
+  var b = m.match(/,_/g) ? m.match(/,_/g).length : 0
+  if (a >= 5 && b >= 5) {
+    console.log(m)
+    console.log(n)
+  console.log(m.match(/\._/g))
+  console.log(m.match(/,_/g))
+
+  }
+}
+
+for (var i = 1; i <1227; i++) {
+  trasnf(i, 1227)
+  // console.log('-----------')
+  console.log()
+}
+
 
 
 
